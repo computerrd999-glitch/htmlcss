@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3: Railway Ticket Reservation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 6px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+        .center {
+            text-align: center;
+            margin-top: 15px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Railway Ticket Reservation Form</h2>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>Journey Date:</td>
+                    <td><input type="date" name="journeyDate" required></td>
+                </tr>
+                <tr>
+                    <td>Source Station:</td>
+                    <td><input type="text" name="sourceStation" required></td>
+                </tr>
+                <tr>
+                    <td>Destination Station:</td>
+                    <td><input type="text" name="destStation" required></td>
+                </tr>
+                <tr>
+                    <td>Class:</td>
+                    <td>
+                        <select name="class" required>
+                            <option value="">-- Select Class --</option>
+                            <option value="1A">AC First Class (1A)</option>
+                            <option value="2A">AC 2 Tier (2A)</option>
+                            <option value="3A">AC 3 Tier (3A)</option>
+                            <option value="SL">Sleeper (SL)</option>
+                            <option value="CC">Chair Car (CC)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number:</td>
+                    <td><input type="tel" name="mobile" required></td>
+                </tr>
+                <tr>
+                    <td>Availing Concession:</td>
+                    <td><input type="checkbox" name="concession" value="yes"> Yes</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" name="dob" required></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" name="age" min="1" max="100" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <select name="gender" required>
+                            <option value="">-- Select Gender --</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea name="address" rows="3" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Payment Method:</td>
+                    <td>
+                        <select name="paymentMethod" required>
+                            <option value="">-- Select Payment Method --</option>
+                            <option value="UPI">UPI</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center">
+                        <input type="submit" value="Submit Reservation">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="center">
+            <a href="../index.html">&larr; Back to Main Index</a>
+        </div>
+    </div>
+</body>
+</html>

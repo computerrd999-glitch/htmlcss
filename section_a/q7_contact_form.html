@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q7: Organisation Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        .form-box {
+            width: 450px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 6px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="time"] {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+        .center {
+            text-align: center;
+            margin-top: 15px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Organisation Contact &amp; Appointment Form</h2>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" placeholder="Enter your full name" required></td>
+                </tr>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="email" name="email" placeholder="Enter email address" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number:</td>
+                    <td><input type="tel" name="mobile" placeholder="Enter 10-digit mobile number" required></td>
+                </tr>
+                <tr>
+                    <td>Purpose:</td>
+                    <td><input type="text" name="purpose" placeholder="Enter purpose of visit" required></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" name="appointmentDate" placeholder="Select date" required></td>
+                </tr>
+                <tr>
+                    <td>Appointment Time:</td>
+                    <td><input type="time" name="appointmentTime" placeholder="Select time" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="center">
+            <a href="../index.html">&larr; Back to Main Index</a>
+        </div>
+    </div>
+</body>
+</html>
