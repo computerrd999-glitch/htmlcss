@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Q9: Even or Odd Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input, button {
+            padding: 8px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Check Even or Odd Number</h2>
+    <label>Enter an Integer: </label>
+    <input type="number" id="num" value="15">
+    <button onclick="checkEvenOdd()">Check</button>
+
+    <div id="result"></div>
+    <br>
+    <a href="../index.html">&larr; Back to Main Index</a>
+
+    <script>
+        function checkEvenOdd() {
+            let n = parseInt(document.getElementById("num").value);
+            if (isNaN(n)) {
+                document.getElementById("result").innerText = "Please enter a valid number.";
+                return;
+            }
+            if (n % 2 === 0) {
+                document.getElementById("result").innerText = n + " is an EVEN number.";
+            } else {
+                document.getElementById("result").innerText = n + " is an ODD number.";
+            }
+        }
+    </script>
+</body>
+</html>

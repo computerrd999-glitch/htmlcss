@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Q6: Current Date and Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h2>System Date and Time</h2>
+    <button onclick="showDateTime()">Show Current Date and Time</button>
+
+    <div id="result"></div>
+    <br>
+    <a href="../index.html">&larr; Back to Main Index</a>
+
+    <script>
+        function showDateTime() {
+            let currentDate = new Date();
+            document.getElementById("result").innerText = currentDate.toString();
+        }
+    </script>
+</body>
+</html>

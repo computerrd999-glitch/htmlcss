@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Q8: Swap Two Variables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input, button {
+            padding: 6px;
+            font-size: 16px;
+            margin-right: 8px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Swap Two Variables</h2>
+    <label>Variable A: </label>
+    <input type="text" id="varA" value="10">
+    <label>Variable B: </label>
+    <input type="text" id="varB" value="20">
+    <button onclick="swapValues()">Swap</button>
+
+    <div id="result"></div>
+    <br>
+    <a href="../index.html">&larr; Back to Main Index</a>
+
+    <script>
+        function swapValues() {
+            let a = document.getElementById("varA").value;
+            let b = document.getElementById("varB").value;
+
+            let temp = a;
+            a = b;
+            b = temp;
+
+            document.getElementById("varA").value = a;
+            document.getElementById("varB").value = b;
+
+            document.getElementById("result").innerText = "After Swapping: Variable A = " + a + ", Variable B = " + b;
+        }
+    </script>
+</body>
+</html>

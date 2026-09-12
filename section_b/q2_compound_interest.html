@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Q2: Compound Interest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Compound Interest Calculator</h2>
+    <p>Principal (P) = Rs. 25,000</p>
+    <p>Time (T) = 3 Years</p>
+    <p>Rate (R) = 10% per annum</p>
+
+    <button onclick="calculateInvestment()">Calculate Final Value</button>
+
+    <div id="result"></div>
+    <br>
+    <a href="../index.html">&larr; Back to Main Index</a>
+
+    <script>
+        function calculateInvestment() {
+            let p = 25000;
+            let t = 3;
+            let r = 10;
+            let a = p * Math.pow((1 + r / 100), t);
+            document.getElementById("result").innerText = "Final Investment Value: Rs. " + a.toFixed(2);
+        }
+    </script>
+</body>
+</html>

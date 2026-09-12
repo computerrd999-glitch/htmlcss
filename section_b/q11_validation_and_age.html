@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Q11: Form Validation &amp; Age Calculation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            width: 480px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 6px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+        .center {
+            text-align: center;
+            margin-top: 15px;
+        }
+        input[type="submit"] {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Railway Form Validation &amp; Age</h2>
+        <form onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td>Email ID:</td>
+                    <td><input type="text" id="email" required></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number:</td>
+                    <td><input type="text" id="mobile" maxlength="10" required></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" id="dob" onchange="calculateAge()" required></td>
+                </tr>
+                <tr>
+                    <td>Calculated Age:</td>
+                    <td><input type="number" id="age" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="center">
+                        <input type="submit" value="Validate &amp; Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="center">
+            <a href="../index.html">&larr; Back to Main Index</a>
+        </div>
+    </div>
+
+    <script>
+        function calculateAge() {
+            let dobValue = document.getElementById("dob").value;
+            if (dobValue) {
+                let dob = new Date(dobValue);
+                let today = new Date();
+                let age = today.getFullYear() - dob.getFullYear();
+                let monthDiff = today.getMonth() - dob.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                    age--;
+                }
+                document.getElementById("age").value = age;
+            }
+        }
+
+        function validateForm() {
+            let email = document.getElementById("email").value;
+            let mobile = document.getElementById("mobile").value;
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            let mobilePattern = /^[0-9]{10}$/;
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid Email ID.");
+                return false;
+            }
+
+            if (!mobilePattern.test(mobile)) {
+                alert("Please enter a valid 10-digit Mobile Number.");
+                return false;
+            }
+
+            let age = document.getElementById("age").value;
+            if (!age || age < 0) {
+                alert("Please select a valid Date of Birth.");
+                return false;
+            }
+
+            alert("Form validated successfully! Age: " + age);
+            return true;
+        }
+    </script>
+</body>
+</html>
